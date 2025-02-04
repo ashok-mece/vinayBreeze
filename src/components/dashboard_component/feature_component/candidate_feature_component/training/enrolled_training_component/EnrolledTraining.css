@@ -1,0 +1,28 @@
+.erolled-training-list .enroll-status-pending-button {
+    font-size: medium !important;
+    font-weight: 600;
+    background-color: rgb(224, 161, 44);
+    border-color: rgb(224, 161, 44);
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-left: 20px;
+}
+.erolled-training-list .enroll-status-pending-button i {
+    margin-right: 8px;
+}
+
+.erolled-training-list .enroll-status-confirmed-button {
+    font-size: medium !important;
+    font-weight: 600;
+    background-color: rgb(49, 148, 49);
+    border-color: rgb(49, 148, 49);
+    color: var(--white-color) !important; 
+    border-radius: 4px !important;
+    margin-left: 20px;
+}
+.erolled-training-list .enroll-status-confirmed-button i {
+    margin-right: 8px;
+}
+
+/* background-color: var(--app-color) !important; */
+    /* border-color: var(--app-color) !important; */

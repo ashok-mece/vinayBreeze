@@ -1,0 +1,20 @@
+.candidate-completed-training-list .rate-btn {
+    font-size: small !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.candidate-completed-training-list button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}
+
+.rate-training-modal .modal-rate-btn {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}

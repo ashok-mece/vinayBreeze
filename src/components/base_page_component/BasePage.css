@@ -1,0 +1,570 @@
+/* .base-page-component {
+    --accent-color: #f5a841; 
+}
+
+.base-page-component section [class^="container"] {
+    padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .base-page-component section [class^="container"] {
+        padding: 4rem;
+    }
+
+    .base-page-component nav [class^="container"] {
+        padding: 0 4rem;
+    }
+}
+
+.base-page-component section:not(:first-of-type) {
+    text-align: center;
+}
+
+.base-page-component section:nth-child(2n) {
+    background-color: #ecf2ff;
+}
+
+.base-page-component .container a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.base-page-component .container a:hover {
+    color: var(--accent-color);
+}
+
+.base-page-component section .card,
+.base-page-component .btn-outline-dark {
+    border: 2px solid #ecf2ff;
+    box-shadow: 4px 4px #ecf2ff;
+    transition: all 0.4s;
+}
+
+.base-page-component .btn-outline-dark:hover {
+    box-shadow: 4px 4px var(--accent-color);
+} */
+
+/* NAVBAR */
+
+/* .base-page-component .navbar {
+    background-color: #1b4962;
+}
+
+.base-page-component .navbar-brand {
+    color: white;
+}
+
+.base-page-component .navbar-nav .nav-link {
+    color: #ecf2ff;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+.base-page-component .navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.base-page-component .navbar-nav .nav-link.d-lg-none {
+    color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .base-page-component .navbar-nav .nav-item {
+        padding: 0 1rem;
+    }
+
+    .base-page-component .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+.base-page-component .btn-outline-dark {
+    color: white;
+    border-color: white;
+}
+
+.base-page-component .btn-outline-dark:hover {
+    background-color: white;
+    color: var(--accent-color);
+} */
+
+/* HERO */
+
+/* .base-page-component section.hero {
+    padding-top: 72px;
+}
+
+@media screen and (max-width: 576px) {
+    .base-page-component section.hero {
+        text-align: center;
+    }
+
+    .base-page-component section.hero img {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+} */
+
+/* SERVICES */
+
+/* .base-page-component section.services i {
+    font-size: 2rem;
+    margin: 1rem auto 0;
+    border: 2px solid #ecf2ff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+}
+
+.base-page-component section .card {
+    max-width: 22rem;
+    margin-inline: auto;
+} */
+
+/* ABOUT */
+/* @media screen and (min-width: 1024px) {
+
+    .base-page-component section.about .container,
+    .base-page-component section.testimonials .container {
+        width: 100%;
+    }
+} */
+
+/* PROJECTS */
+/* .base-page-component section.projects .card {
+    max-width: 17rem;
+    text-align: left;
+}
+
+.base-page-component section.projects .card img {
+    max-width: 70%;
+    margin: 1rem auto;
+} */
+
+/* CONTACT */
+/* .base-page-component section.contact .social-media a {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+}
+
+.base-page-component .demo {
+    background-color: #1b4962;
+} */
+
+/* CAROUSEL */
+/* .carousel-inner {
+    width: 100%;
+    height: 60vh; /* 60% of the viewport height 
+}
+
+.carousel-item {
+    height: 60vh; /* 60% of the viewport height 
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
+
+
+/* previous working
+ .base-page-component {
+    --accent-color: #f5a841; 
+}
+
+.base-page-component section [class^="container"] {
+    padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .base-page-component section [class^="container"] {
+        padding: 4rem;
+    }
+
+    .base-page-component nav [class^="container"] {
+        padding: 0 4rem;
+    }
+}
+
+.base-page-component section:not(:first-of-type) {
+    text-align: center;
+}
+
+.base-page-component section:nth-child(2n) {
+    background-color: #ecf2ff;
+}
+
+.base-page-component .container a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.base-page-component .container a:hover {
+    color: var(--accent-color);
+}
+
+.base-page-component section .card,
+.base-page-component .btn-outline-dark {
+    border: 2px solid #ecf2ff;
+    box-shadow: 4px 4px #ecf2ff;
+    transition: all 0.4s;
+}
+
+.base-page-component .btn-outline-dark:hover {
+    box-shadow: 4px 4px var(--accent-color);
+} 
+
+.base-page-component .navbar {
+    background-color: #1b4962;
+}
+
+.base-page-component .navbar-brand {
+    color: white;
+}
+
+.base-page-component .navbar-nav .nav-link {
+    color: #ecf2ff;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+.base-page-component .navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.base-page-component .navbar-nav .nav-link.d-lg-none {
+    color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .base-page-component .navbar-nav .nav-item {
+        padding: 0 1rem;
+    }
+
+    .base-page-component .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+.base-page-component .btn-outline-dark {
+    color: white;
+    border-color: white;
+}
+
+.base-page-component .btn-outline-dark:hover {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+.base-page-component section.hero {
+    padding-top: 72px;
+}
+
+@media screen and (max-width: 576px) {
+    .base-page-component section.hero {
+        text-align: center;
+    }
+
+    .base-page-component section.hero img {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+
+    .base-page-component section.testimonials img {
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 288px) {
+    .base-page-component section.testimonials img {
+        height: 200px !important;
+    }
+}
+
+.base-page-component section.services i {
+    font-size: 2rem;
+    margin: 1rem auto 0;
+    border: 2px solid #ecf2ff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+}
+
+.base-page-component section .card {
+    max-width: 22rem;
+    margin-inline: auto;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .base-page-component section.about .container,
+    .base-page-component section.testimonials .container {
+        width: 60%;
+    }
+}
+
+.base-page-component section.projects .card {
+    max-width: 17rem;
+    text-align: left;
+}
+
+.base-page-component section.projects .card img {
+    max-width: 70%;
+    margin: 1rem auto;
+}
+
+.base-page-component section.contact .social-media a {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+}
+
+.base-page-component .demo {
+    background-color: #1b4962;
+} */
+
+
+
+/* Updated Base css */
+.base-page-component {
+    --accent-color: #f5a841; 
+}
+
+.base-page-component section [class^="container"] {
+    padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .base-page-component section [class^="container"] {
+        padding: 4rem;
+    }
+
+    .base-page-component nav [class^="container"] {
+        padding: 0 4rem;
+    }
+}
+
+.base-page-component section:not(:first-of-type) {
+    text-align: center;
+}
+
+.base-page-component section:nth-child(2n) {
+    background-color: #ecf2ff;
+}
+
+.base-page-component .container a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.base-page-component .container a:hover {
+    color: var(--accent-color);
+}
+
+.base-page-component section .card,
+.base-page-component .btn-outline-dark {
+    border: 2px solid #ecf2ff;
+    box-shadow: 4px 4px #ecf2ff;
+    transition: all 0.4s;
+}
+
+.base-page-component .btn-outline-dark:hover {
+    box-shadow: 4px 4px var(--accent-color);
+}
+
+/* NAVBAR */
+.base-page-component .navbar {
+    background-color: #1b4962;
+}
+
+.base-page-component .navbar-brand {
+    color: white;
+}
+
+.base-page-component .navbar-nav .nav-link {
+    color: #ecf2ff;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+.base-page-component .navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.base-page-component .navbar-nav .nav-link.d-lg-none {
+    color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .base-page-component .navbar-nav .nav-item {
+        padding: 0 1rem;
+    }
+
+    .base-page-component .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+.base-page-component .btn-outline-dark {
+    color: white;
+    border-color: white;
+}
+
+.base-page-component .btn-outline-dark:hover {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+/* HERO */
+.base-page-component section.hero {
+    padding-top: 72px;
+}
+
+@media screen and (max-width: 576px) {
+    .base-page-component section.hero {
+        text-align: center;
+    }
+
+    .base-page-component section.hero img {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+
+    .base-page-component section.testimonials img {
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 288px) {
+    .base-page-component section.testimonials img {
+        height: 200px !important;
+    }
+}
+
+/* SERVICES */
+.base-page-component section.services i {
+    font-size: 2rem;
+    margin: 1rem auto 0;
+    border: 2px solid #ecf2ff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+}
+
+.base-page-component section .card {
+    max-width: 22rem;
+    margin-inline: auto;
+}
+
+/* ABOUT */
+@media screen and (min-width: 1024px) {
+    .base-page-component section.about .container,
+    .base-page-component section.testimonials .container {
+        width: 60%;
+    }
+}
+
+/* PROJECTS */
+.base-page-component section.projects .card {
+    max-width: 17rem;
+    text-align: left;
+}
+
+.base-page-component section.projects .card img {
+    max-width: 70%;
+    margin: 1rem auto;
+}
+
+/* CONTACT */
+.base-page-component section.contact {
+    text-align: center; /* Center the text inside the contact section */
+}
+
+.base-page-component section.contact .contactnumber,
+.base-page-component section.contact .gmail {
+    margin: 0 auto; /* Center the contact items */
+}
+
+.base-page-component section.contact .contactnumber a,
+.base-page-component section.contact .gmail a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.3rem; /* Adjust font size if needed */
+}
+
+.base-page-component section.contact .contactnumber i,
+.base-page-component section.contact .gmail i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.base-page-component .demo {
+    background-color: #1b4962;
+} 
+
+.base-page-component .breezelink {
+    margin-bottom: 15px;
+    text-align: center; /* Center the breezelink */
+}
+
+.base-page-component .red-link {
+    color: red;
+}
+
+/* CAROUSEL CONTROLS */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 30px; /* Width of the control */
+    height: 30px; /* Height of the control */
+    background-color: #000000; /* Black background color */
+    border-radius: 50%; /* Circular shape */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Centering adjustment */
+    z-index: 10; /* Ensure controls are on top */
+    display: flex; /* Flexbox for centering the icon */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Position to the left */
+}
+
+.carousel-control-next {
+    right: 10px; /* Position to the right */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    font-size: 16px; /* Smaller icon size */
+    color: #ffffff; /* White color for icons */
+    font-weight: 900; /* Extra bold */
+}
+
+.base-page-component .contact-item a {
+    text-decoration: none;
+    color: #333; /* or any color that matches your theme */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.base-page-component .contact-item i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #007bff; /* or a color to match your design */
+}

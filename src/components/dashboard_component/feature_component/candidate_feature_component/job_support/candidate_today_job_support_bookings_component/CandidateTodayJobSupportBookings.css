@@ -1,0 +1,40 @@
+.candidate-today-job-support-bookings .card:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.candidate-today-job-support-bookings .time-slot-container { 
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Adjust the gap between buttons */
+    padding: 5px; /* Add padding around the container */
+}
+
+.candidate-today-job-support-bookings .time-slot-button {
+    border: 0.3px solid rgb(108, 103, 103); /* Remove default border */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.candidate-today-job-support-bookings .join-meeting-button{
+    font-size: small !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.candidate-today-job-support-bookings button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}
+
+.candidate-today-job-support-bookings .project-description {
+    display: block;
+    max-height: 60px;
+    max-width: 1000px;
+    /* Set a fixed height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    white-space: normal;
+    /* Adjust width as needed */
+}

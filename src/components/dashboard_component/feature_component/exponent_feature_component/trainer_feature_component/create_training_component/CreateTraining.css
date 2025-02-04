@@ -1,0 +1,3 @@
+.create-training .technology-multiselect .option:hover {
+    background-color: var(--child-color) !important;
+}

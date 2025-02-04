@@ -1,0 +1,292 @@
+/* CSS for login parent component */
+/* .Login-page-component {
+    width: 100%;
+    height:100%;
+    background-color: #1b4962;
+} */
+
+/* CSS for login child component contain login form */
+/* .Login-form-component {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    padding-top: 0%;
+} */
+
+/* CSS for login form heading */
+/* .Login-form-heading {
+    color: #1b4962;
+    text-align: center;
+    border-bottom: 1px solid #1b4962;
+} */
+
+/* CSS for login form */
+/* .Login-form {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 56%;
+    padding: 15px;
+} */
+
+/* CSS for form input text fields */
+/* form .Login-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+  
+form .Login-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 10px 0;
+}
+  
+.Login-txt-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    background: none;
+    outline: none;
+}
+  
+.Login-txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+  
+.Login-txt-field span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1b4962;;
+    transition: 0.5s;
+}
+  
+.Login-txt-field input:focus ~ label,
+.Login-txt-field input:valid ~ label {
+    top: -1px;
+    color: #1b4962;
+}
+  
+.Login-txt-field input:focus ~ span::before,
+.Login-txt-field input:valid ~ span::before {
+    width: 100%;
+} */
+/* ====================================================================================== */
+
+/* CSS for breeze custom button */
+/* .Login-breeze-button {
+    font-size: large !important;
+    background-color: #1b4962 !important;
+    border-color: #2d4755 !important;
+    color: aliceblue !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+} */
+
+/* CSS for label for dont having account */
+/* .Login-label-already-have {
+    font-size: small;
+    margin-top: 3px;
+} */
+
+/* CSS for anchor to navigate to register */
+/* .Login-anchor-navigate {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b4962 !important;
+} */
+
+/* .Login-anchor-navigate:hover {
+    text-decoration: underline;
+}
+
+.Login-div-for-err-msg {
+    font-size: small;
+    color: red;
+} */
+
+/* ===================================== After Responsive ====================================== */
+/* Base styles for login parent component */ 
+.Login-page-component {
+    width: 100%;
+    height: 100%;
+    background-color: #1b4962;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base styles for login child component containing the login form */
+.Login-form-component {
+    background-color: white;  
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* CSS for login form heading */
+.Login-form-heading {
+    color: #1b4962;
+    text-align: center;
+    border-bottom: 1px solid #1b4962;
+    padding-bottom: 10px;
+}
+
+/* CSS for login form */
+.Login-form {
+    width: 100%;
+    padding: 20px;
+}
+
+/* CSS for form input text fields */
+form .Login-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+
+.Login-txt-field input {
+    width: 100%;
+    padding: 10px 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #adadad;
+    background: none;
+    outline: none;
+}
+
+.Login-txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.Login-txt-field span::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1b4962;
+    transition: 0.5s;
+}
+
+.Login-txt-field input:focus ~ label,
+.Login-txt-field input:valid ~ label {
+    top: -1px;
+    color: #1b4962;
+    font-size: 12px;
+}
+
+.Login-txt-field input:focus ~ span::before,
+.Login-txt-field input:valid ~ span::before {
+    width: 100%;
+}
+
+/* CSS for breeze custom button */
+.Login-breeze-button {
+    font-size: large !important;
+    background-color: #1b4962 !important;
+    border-color: #2d4755 !important;
+    color: aliceblue !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* CSS for label for don't having account */
+.Login-label-already-have {
+    font-size: small;
+    margin-top: 3px;
+}
+
+/* CSS for anchor to navigate to register */
+.Login-anchor-navigate {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b4962;
+}
+
+.Login-anchor-navigate:hover {
+    text-decoration: underline;
+}
+
+.Login-div-for-err-msg {
+    font-size: medium;
+    font-weight: 700;
+    color: #be3144;
+    margin-top: 10px;
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    .Login-form-component {
+        width: 90%;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .Login-form-component {
+        width: 95%;
+    }
+
+    .Login-breeze-button {
+        font-size: medium;
+    }
+
+    .Login-form-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .Login-txt-field input {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .Login-txt-field label {
+        font-size: 12px;
+    }
+
+    .Login-div-for-err-msg {
+        font-size: smaller;
+    }
+}
+
+    

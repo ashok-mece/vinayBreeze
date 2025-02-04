@@ -1,0 +1,12 @@
+.candidate-started-training-list .join-meeting-button{
+    font-size: small !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.candidate-started-training-list button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}

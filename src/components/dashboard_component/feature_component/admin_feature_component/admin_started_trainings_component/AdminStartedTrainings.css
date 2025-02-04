@@ -1,0 +1,48 @@
+.admin-started-training .view-btn {
+    font-size: small !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.update-date-modal .upload-meeting-link-btn {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.update-date-modal .remove-meeting-link-btn {
+    font-size: medium !important;
+    background-color: rgb(224, 161, 44) !important;
+    border-color: rgb(224, 161, 44) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.update-date-modal button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}
+
+.update-date-modal .update-end-date-btn {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.update-date-modal .update-start-time-btn {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.cdb-datatable thead[data-test="table-foot"] {
+    display: none; /* Hide the footer <thead> */
+}

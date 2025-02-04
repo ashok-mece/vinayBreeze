@@ -1,0 +1,32 @@
+.admin-completed-job-supports .monthly-search-btn {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important; 
+}
+
+.admin-completed-job-supports .view-btn {
+    font-size: small !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.view-more-completed-job-support-info-modal .time-slot-container { 
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Adjust the gap between buttons */
+    padding: 5px; /* Add padding around the container */
+}
+
+.view-more-completed-job-support-info-modal .time-slot-button {
+    border: 0.3px solid rgb(108, 103, 103); /* Remove default border */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.cdb-datatable thead[data-test="table-foot"] {
+    display: none; /* Hide the footer <thead> */
+}

@@ -1,0 +1,84 @@
+.exponent-approved-interview-support .card:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.exponent-approved-interview-support .time-slot-container { 
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Adjust the gap between buttons */
+    padding: 5px; /* Add padding around the container */
+}
+
+.exponent-approved-interview-support .time-slot-button {
+    border: 0.3px solid rgb(108, 103, 103); /* Remove default border */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */ 
+}
+
+.exponent-approved-interview-support .update-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.update-approved-interview-support-modal .technology-multiselect .option:hover {
+    background-color: var(--child-color) !important;
+}
+
+.update-approved-interview-support-modal .time-slot-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Adjust the gap between buttons */
+    padding: 5px; /* Add padding around the container */
+}
+
+.update-approved-interview-support-modal .time-slot-button {
+    border: 0.3px solid rgb(108, 103, 103); /* Remove default border */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.update-approved-interview-support-modal .time-slot-button:hover {
+    background-color: var(--child-color) !important; /* Button background color on hover */
+    border: none;
+}
+
+.time-slot-button.selected {
+    background-color: var(--app-color) !important; /* Different color for selected buttons */
+    border: none;
+    color: var(--white-color) !important;
+}
+
+@media (max-width: 768px) {
+    .update-approved-interview-support-modal .time-slot-button {
+        width: 100%; /* Make buttons full-width on smaller screens */
+    }
+}
+
+.update-approved-interview-support-modal .label-container {
+    display: flex;
+    justify-content: space-between; /* Space out the label and the icon */
+    align-items: center; /* Center align the label and icon vertically */
+}
+
+.update-approved-interview-support-modal .reload-container {
+    display: flex;
+    align-items: center; /* Center align the icon and text vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.update-approved-interview-support-modal .reload-icon {
+    color: var(--app-color) !important; /* Color of the reload icon */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.update-approved-interview-support-modal .reload-text {
+    margin-left: 5px; /* Space between icon and text */
+    color: var(--app-color) !important; /* Color of the text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}

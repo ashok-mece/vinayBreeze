@@ -1,0 +1,65 @@
+.sidebar-menu-item:hover {
+    background-color: var(--child-color) !important;
+}
+
+.sidebar-menu-item.active {
+    background-color: var(--child-color) !important;
+}
+
+.sidebar-submenu-item:hover {
+    background-color: var(--child-color) !important;
+}
+
+.sidebar-submenu-item.active {
+    background-color: var(--child-color) !important;
+}
+
+.sidebar-exponent-dropdown {
+    background-color: var(--child-color) !important;
+    color: var(--white-color) !important;
+    width: 100%;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+}
+
+.sidebar-exponent-dropdown-option {
+    background-color: var(--child-color) !important;
+    color: var(--white-color) !important;
+}
+
+.sidebar-exponent-dropdown:focus {
+    outline: none;
+}
+
+
+
+
+/* without sub menu
+.sidebar-menu-item:hover {
+    background-color: var(--child-color) !important;
+}
+
+.sidebar-menu-item.active {
+    background-color: var(--child-color) !important;
+}
+
+.sidebar-exponent-dropdown {
+    background-color: var(--child-color) !important;
+    color: var(--white-color) !important;
+    width: 100%;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+}
+
+.sidebar-exponent-dropdown-option {
+    background-color: var(--child-color) !important;
+    color: var(--white-color) !important;
+}
+
+.sidebar-exponent-dropdown:focus {
+    outline: none;
+}*/

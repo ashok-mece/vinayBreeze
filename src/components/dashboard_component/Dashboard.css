@@ -1,0 +1,43 @@
+:root {
+    --app-color: #1b4962;
+    --child-color: #8CB9BD;
+    --white-color: #fff;
+}
+
+.app-bg-color{
+    background-color: var(--app-color) !important;
+}
+
+.app-color{
+    color: var(--app-color) !important;
+}
+
+.child-bg-color{
+    background-color: var(--child-color) !important;
+}
+
+.child-color{
+    color: var(--child-color) !important;
+}
+
+.white-color{
+    color: var(--white-color) !important;
+}
+
+.dashboard-button {
+    font-size: large !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.dashboard-button-horizontal {
+    font-size: large !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-left: 20px;
+}

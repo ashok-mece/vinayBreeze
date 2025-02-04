@@ -1,0 +1,60 @@
+.create-job-support .technology-multiselect .option:hover {
+    background-color: var(--child-color) !important;
+}
+
+.create-job-support .time-slot-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Adjust the gap between buttons */
+    padding: 5px; /* Add padding around the container */
+}
+
+.create-job-support .time-slot-button {
+    border: 0.3px solid rgb(108, 103, 103); /* Remove default border */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.create-job-support .time-slot-button:hover {
+    background-color: var(--child-color) !important; /* Button background color on hover */
+    border: none;
+}
+
+.time-slot-button.selected {
+    background-color: var(--app-color) !important; /* Different color for selected buttons */
+    border: none;
+    color: var(--white-color) !important;
+}
+
+@media (max-width: 768px) {
+    .create-job-support .time-slot-button {
+        width: 100%; /* Make buttons full-width on smaller screens */
+    }
+}
+
+.create-job-support .label-container {
+    display: flex;
+    justify-content: space-between; /* Space out the label and the icon */
+    align-items: center; /* Center align the label and icon vertically */
+}
+
+.create-job-support .reload-container {
+    display: flex;
+    align-items: center; /* Center align the icon and text vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.create-job-support .reload-icon {
+    color: var(--app-color) !important; /* Color of the reload icon */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.create-job-support .reload-text {
+    margin-left: 5px; /* Space between icon and text */
+    color: var(--app-color) !important; /* Color of the text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+

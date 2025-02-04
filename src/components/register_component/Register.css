@@ -1,0 +1,345 @@
+/* .Register-page-component {
+    width: 100%;
+    height:100%;
+    background-color: #1b4962;
+}
+
+.Register-form-component {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 65%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    padding-top: 0%;
+}
+
+.Register-form-heading {
+    color: #1b4962;
+    text-align: center;
+    border-bottom: 1px solid #1b4962;
+}
+
+.Register-form {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 70%;
+    padding: 15px;
+} */
+
+/* CSS for form input text fields */
+/* form .Register-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+  
+form .Register-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 10px 0;
+}
+  
+.Register-txt-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    background: none;
+    outline: none;
+}
+  
+.Register-txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+  
+.Register-txt-field span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1b4962;;
+    transition: 0.5s;
+}
+  
+.Register-txt-field input:focus ~ label,
+.Register-txt-field input:valid ~ label {
+    top: -1px;
+    color: #1b4962;
+}
+  
+.Register-txt-field input:focus ~ span::before,
+.Register-txt-field input:valid ~ span::before {
+    width: 100%;
+} */
+
+/* breeze custom button */
+/* .Register-breeze-button {
+    font-size: large !important;
+    background-color: #1b4962 !important;
+    border-color: #2d4755 !important;
+    color: aliceblue !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.Register-label-already-have {
+    font-size: small;
+    margin-top: 3px;
+}
+
+.Register-anchor-navigate {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b4962 !important;
+}
+
+.Register-anchor-navigate:hover {
+    text-decoration: underline;
+}
+
+.Register-div-for-err-msg {
+    font-size: small;
+    color: red;
+}
+
+.Register-dropdown-button {
+    text-align: left;
+    font-size: 12px !important;
+    min-width: max-content;
+    background-color: #1b4962 !important;
+    border-radius: 4px !important;
+}
+
+.Text-in-register-dropdown {
+    margin-right: 10px;
+} */
+
+
+/*================================ After Responsive =======================================*/
+/* Base styles for the registration parent component */
+.Register-page-component {
+    width: 100%;
+    height: 100%;
+    background-color: #1b4962;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base styles for the registration form container */
+.Register-form-component {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* CSS for the registration form heading */
+.Register-form-heading {
+    color: #1b4962;
+    text-align: center;
+    border-bottom: 1px solid #1b4962;
+    padding-bottom: 10px;
+}
+
+/* CSS for the registration form */
+.Register-form {
+    width: 100%;
+    padding: 20px;
+}
+
+/* CSS for form input text fields */
+form .Register-txt-field {
+    position: relative;
+    margin: 20px 0;
+}
+
+.Register-txt-field input {
+    width: 100%;
+    padding: 10px 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #adadad;
+    background: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.Register-txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.Register-txt-field span::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1b4962;
+    transition: 0.5s;
+}
+
+.Register-txt-field input:focus ~ label,
+.Register-txt-field input:valid ~ label {
+    top: -5px;
+    color: #1b4962;
+    font-size: 12px;
+}
+
+.Register-txt-field input:focus ~ span::before,
+.Register-txt-field input:valid ~ span::before {
+    width: 100%;
+}
+
+/* Breeze custom button */
+.Register-breeze-button {
+    font-size: large !important;
+    background-color: #1b4962 !important;
+    border: none !important;
+    color: aliceblue !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* CSS for label for 'already have an account' */
+.Register-label-already-have {
+    font-size: small;
+    margin-top: 3px;
+}
+
+/* CSS for anchor to navigate to login */
+.Register-anchor-navigate {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b4962;
+}
+
+.Register-anchor-navigate:hover {
+    text-decoration: underline;
+}
+
+.Register-div-for-err-msg {
+    font-size: medium;
+    font-weight: 700;
+    color: #be3144;
+    margin-top: 10px;
+}
+
+.Register-div-for-suc-msg {
+    font-size: medium;
+    font-weight: 700;
+    color: green;
+    margin-top: 10px;
+}
+
+/* CSS for the dropdown button */
+.Register-dropdown-button {
+    text-align: left;
+    font-size: 10px !important;
+    background-color: #1b4962 !important;
+    color: aliceblue;
+    border: none;
+    border-radius: 4px !important;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Text-in-register-dropdown {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    .Register-form-component {
+        width: 90%;
+    }
+
+    .Register-dropdown-button {
+        font-size: 12px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .Register-form-component {
+        width: 95%;
+    }
+
+    .Register-breeze-button {
+        font-size: medium;
+    }
+
+    .Register-form-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .Register-txt-field input {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .Register-txt-field label {
+        font-size: 12px;
+    }
+
+    .Register-div-for-err-msg {
+        font-size: smaller;
+    }
+
+    .Register-div-for-suc-msg {
+        font-size: smaller;
+    }
+
+    .Register-dropdown-button {
+        font-size: 12px;
+    }
+}
+
+
+
+    

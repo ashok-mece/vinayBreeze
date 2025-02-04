@@ -1,0 +1,11 @@
+.session-expired-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-expired-content {
+    text-align: center;
+    padding: 20px;
+}

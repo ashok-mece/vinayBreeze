@@ -1,0 +1,45 @@
+.created-interview-supports .card:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.created-interview-supports .prev-next-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+} 
+
+.created-interview-supports .prev-next-div button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}
+
+.created-interview-supports .view-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.view-hold-interview-support-modal .modal-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.view-hold-interview-support-modal .time-slot-container { 
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Adjust the gap between buttons */
+    padding: 5px; /* Add padding around the container */
+}
+
+.view-hold-interview-support-modal .time-slot-button {
+    border: 0.3px solid rgb(108, 103, 103); /* Remove default border */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+}

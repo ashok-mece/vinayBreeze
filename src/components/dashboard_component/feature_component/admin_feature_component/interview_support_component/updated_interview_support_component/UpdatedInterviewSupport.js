@@ -1,0 +1,396 @@
+import './UpdatedInterviewSupport.css';
+import AdminService from '../../../../../../Services/admin_service/AdminService';
+import Constants from '../../../../../Constants';
+import { Card, Container, Modal } from 'react-bootstrap';
+import LoadingBar from '../../../../../loading_bar_component/LoadingBar';
+import { useEffect, useState } from 'react';
+
+function UpdatedInterviewSupport() {
+
+    const [loadingBar, setLoadingBar] = useState(false);
+
+    const [page, setPage] = useState(0);
+    const [isLastPage, setIsLastPage] = useState(false);
+    const size = 12;
+
+    const disablePrevious = page === 0;
+    const disableNext = isLastPage;
+
+    const handlePreviousNext = async (event) => {
+        const buttonId = event.target.id;
+        if (buttonId === 'prevBtn') {
+            if (page > 0) {
+                setPage(page - 1);
+            }
+        } else {
+            setPage(page + 1);
+        }
+
+        //await getHoldUpdatedInterviewSupportingsOnPage();
+
+    }
+
+    //Fields for to display err msg div and label
+    const [messageColor, setMessageColor] = useState(Constants.MESSAGE_COLOR);
+    const [errMsgDiv, setErrMsgDiv] = useState(false);
+    const [errMsg, setErrMsg] = useState("");
+    //JS for to display err msg 
+    const interviewSupportWithInterviewSupporterDisplayErrMsg = (errorMessage) => {
+        setErrMsg(errorMessage);
+        setErrMsgDiv(true);
+        // setTimeout(() => {
+        //     setErrMsg("");
+        //     setErrMsgDiv(false);
+        // }, 3000);
+    }
+    //JS for to display success msg
+    const interviewSupportWithInterviewSupporterDisplaySucMsg = (errorMessage) => {
+        setMessageColor('green');
+        setErrMsg(errorMessage);
+        setErrMsgDiv(true);
+        setTimeout(() => {
+            setErrMsg("");
+            setErrMsgDiv(false);
+            setMessageColor(Constants.MESSAGE_COLOR);
+        }, Constants.SET_TIME_OUT_FOR_SUCCESS_MSG);
+    }
+
+    const [interviewSupportWithInterviewSupporter, setInterviewSupportWithInterviewSupporter] = useState([]);
+    const getHoldUpdatedInterviewSupportingsOnPage = async () => {
+        setLoadingBar(true);
+        const request = {
+            page: page,
+            size: size,
+        }
+
+        try {
+            const responseData = await AdminService.getHoldUpdatedInterviewSupportingsOnPage(request);
+            console.log(responseData);
+
+            setIsLastPage(responseData.isLastPage);
+            setInterviewSupportWithInterviewSupporter(responseData.interviewSupportWithInterviewSupporterList);
+            if (responseData.interviewSupportWithInterviewSupporterList.length === 0) {
+                interviewSupportWithInterviewSupporterDisplayErrMsg('Interview Supports are not found');
+            }
+        } catch (error) {
+            console.log(error.message);
+            handleInterviewSupportWithInterviewSupporterErrors(error.message);
+        } finally {
+            setLoadingBar(false);
+        }
+    }
+
+    const handleInterviewSupportWithInterviewSupporterErrors = (errorStatus) => {
+        if (Constants.BREEZE_DATABASE_EXCEPTION === errorStatus)
+            interviewSupportWithInterviewSupporterDisplayErrMsg("Sorry, Our service is down");
+        else
+            interviewSupportWithInterviewSupporterDisplayErrMsg("Could not process your request");
+    }
+
+    useEffect(() => {
+        getHoldUpdatedInterviewSupportingsOnPage();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [page]);
+
+    const [viewClicked, setViewClicked] = useState(0);
+    const [viewClickedErrMsg, setViewClickedErrMsg] = useState('');
+    const [interviewSupportWithInterviewSupporterData, setInterviewSupportWithInterviewSupporterData] = useState(null);
+    const handleViewHoldInterviewSupporting = async (interviewSupportId) => {
+        setLoadingBar(true);
+        console.log(interviewSupportId);
+        const request = {
+            interviewSupportId: interviewSupportId,
+        }
+
+        try {
+            const responseData = await AdminService.viewHoldUpdatedInterviewSupporting(request);
+            console.log(responseData);
+            setInterviewSupportWithInterviewSupporterData(responseData);
+            setShowModal(true);
+        } catch (error) {
+            console.log(error.message);
+            handleViewHoldInterviewSupportingErrors(error.message, interviewSupportId);
+        } finally {
+            setLoadingBar(false);
+        }
+    }
+
+    const handleViewHoldInterviewSupportingErrors = (errorStatus, interviewSupportId) => {
+        if (Constants.INVALID_REQUEST_FIELD === errorStatus)
+            handleViewHoldInterviewSupportingErrMsg("Interview Support id is invalid", interviewSupportId);
+        else if (Constants.ENTITY_NOT_FOUND === errorStatus)
+            handleViewHoldInterviewSupportingErrMsg("Interview Support is Not Found", interviewSupportId);
+        else if (Constants.BREEZE_DATABASE_EXCEPTION === errorStatus)
+            handleViewHoldInterviewSupportingErrMsg("Sorry, Our service is down", interviewSupportId);
+        else
+            handleViewHoldInterviewSupportingErrMsg("Could not process your request", interviewSupportId);
+    }
+
+    const handleViewHoldInterviewSupportingErrMsg = (errorMessage, interviewSupportId) => {
+        setViewClickedErrMsg(errorMessage);
+        setViewClicked(interviewSupportId);
+        setTimeout(() => {
+            setViewClickedErrMsg('');
+            setViewClicked(0);
+        }, Constants.SET_TIME_OUT_FOR_ERROR_MSG);
+    }
+
+    const [showModal, setShowModal] = useState(false);
+    const handleModalClose = () => {
+        setShowModal(false);
+        setInterviewSupportWithInterviewSupporterData(null);
+        setDescription('');
+    };
+
+    const [description, setDescription] = useState('')
+    const handleDescription = (event) => {
+        setDescription(event.target.value);
+    }
+    const [descriptionErrMsgDiv, setDescriptionErrMsgDiv] = useState(false);
+    const [descriptionErrMsg, setDescriptionErrMsg] = useState("");
+    //JS for to display err msg
+    const descriptionDisplayErrMsg = (errorMessage) => {
+        setDescriptionErrMsg(errorMessage);
+        setDescriptionErrMsgDiv(true);
+        setTimeout(() => {
+            setDescriptionErrMsg("");
+            setDescriptionErrMsgDiv(false);
+        }, Constants.SET_TIME_OUT_FOR_ERROR_MSG);
+    }
+
+    const handleChangeAdminStatus = async (updateStatus, interviewSupportId) => {
+        
+        const changeAdminStatusRequest = {
+            interviewSupportId: interviewSupportId,
+            updateStatus: updateStatus,
+            description: description,
+        }
+
+        if (updateStatus === Constants.APPROVED) {
+            console.log('approve');
+            changeAdminStatusRequest.description = '';
+        } else if (updateStatus === Constants.REJECTED) {
+            console.log('reject');
+            if (description.trim() === '') {
+                descriptionDisplayErrMsg('description is mandatory to reject');
+                return;
+            }
+        } 
+        setLoadingBar(true); 
+        try {
+            const responseData = await AdminService.changeAdminStatusForUpdatedInterviewSupport(changeAdminStatusRequest);
+            console.log(responseData);
+            changeAdminStatusDisplaySucMsg('Admin Changed Status Succesfully');
+        } catch (error) {
+            console.log(error.message);
+            handleChangeAdminStatusError(error.message);
+        } finally {
+            setLoadingBar(false);
+        }
+
+    }
+
+    const handleChangeAdminStatusError = (errorStatus) => {
+        if (Constants.INVALID_REQUEST_FIELD === errorStatus)
+            changeAdminStatusDisplayErrMsg("please give valid inputs");
+        else if (Constants.ENTITY_NOT_FOUND === errorStatus)
+            changeAdminStatusDisplayErrMsg("Interview Support is Not Found");
+        else if (Constants.BREEZE_DATABASE_EXCEPTION === errorStatus)
+            changeAdminStatusDisplayErrMsg("Sorry, Our service is down");
+        else
+            changeAdminStatusDisplayErrMsg("Could not process your request");
+    }
+
+    const [changeAdminStatusErrMsgDiv, setChangeAdminStatusErrMsgDiv] = useState(false);
+    const [changeAdminStatusErrMsg, setChangeAdminStatusErrMsg] = useState("");
+    //JS for to display err msg
+    const changeAdminStatusDisplayErrMsg = (errorMessage) => {
+        setChangeAdminStatusErrMsg(errorMessage);
+        setChangeAdminStatusErrMsgDiv(true);
+        setTimeout(() => {
+            setChangeAdminStatusErrMsg("");
+            setChangeAdminStatusErrMsgDiv(false);
+        }, Constants.SET_TIME_OUT_FOR_ERROR_MSG);
+    }
+    const changeAdminStatusDisplaySucMsg = (errorMessage) => {
+        setMessageColor('green');
+        setChangeAdminStatusErrMsg(errorMessage);
+        setChangeAdminStatusErrMsgDiv(true);
+        setTimeout(() => {
+            setChangeAdminStatusErrMsg("");
+            setChangeAdminStatusErrMsgDiv(false);
+            setMessageColor(Constants.MESSAGE_COLOR);
+            handleModalClose();
+            window.location.reload();
+        }, Constants.SET_TIME_OUT_FOR_SUCCESS_MSG);
+    }
+
+    const customCssForMsg = {
+        fontSize: 'medium',
+        fontWeight: '700',
+        color: messageColor,
+    }
+
+    return (
+        <div className='updated-interview-supports' style={{ fontSize: '14px' }}>
+            { loadingBar && <LoadingBar /> }
+            <div className='mt-4' style={{ display: 'flex', flexWrap: 'wrap', maxHeight: '80vh', overflow: 'auto' }}>
+                {interviewSupportWithInterviewSupporter.map((item, index) => (
+                    <Card key={index} style={{ width: '22rem', margin: '0.5rem' }} className="card">
+                        <Card.Body>
+                            <Card.Text>
+                                <div className='interview-support'>
+                                    <div className='flex'>
+                                        <label style={{ textDecoration: 'underline', fontSize: '16px' }}>Interview Support</label>
+                                        <button
+                                            style={{ float: 'right' }}
+                                            className='view-button'
+                                            onClick={() => handleViewHoldInterviewSupporting(item.interviewSupport.interviewSupportId)}
+                                        >
+                                            View
+                                        </button>
+                                    </div>
+                                    <label>Interview Supporter-Id : </label> <span>{item.interviewSupporter.userId}</span> <br />
+                                    <label>Interview Supporter-Name : </label> <span>{item.interviewSupporter.userFirstname + " " + item.interviewSupporter.userLastname}</span> <br />
+                                    <label>Technical Stack : </label> <span>{item.interviewSupport.technologyList.map(tech => tech.technologyName).join(', ')}</span>
+                                </div>
+                                {viewClicked === item.interviewSupport.interviewSupportId && (
+                                    <div style={customCssForMsg}>
+                                        <label>{viewClickedErrMsg}</label>
+                                    </div>
+                                )}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                ))}
+                <div>
+                    {errMsgDiv &&
+                        <div style={customCssForMsg}>
+                            <label>{errMsg}</label>
+                        </div>}
+                </div>
+            </div>
+            {interviewSupportWithInterviewSupporter.length !== 0 && (
+                <div className='prev-next-div'>
+                    <button className='dashboard-button'
+                        id='prevBtn'
+                        onClick={handlePreviousNext}
+                        disabled={disablePrevious}
+                    >
+                        {'< '}previous
+                    </button>
+                    <button className='dashboard-button'
+                        id='nextBtn'
+                        style={{ marginLeft: '20px' }}
+                        onClick={handlePreviousNext}
+                        disabled={disableNext}
+                    >
+                        next{' >'}
+                    </button>
+                </div>
+            )}
+            {showModal && (
+                <Modal className='view-hold-interview-support-modal' size='xl' show={showModal} onHide={handleModalClose} centered backdrop="static">
+                    <Container className='px-5'>
+                        <Modal.Header closeButton>
+                            <Modal.Title style={{ fontSize: '18px' }}>
+                            Interview Support
+                            </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body style={{ fontSize: '13px' }}>
+                            <div className='interview-support-and-interview-supporter-data'>
+                                <div className='interview-supporter-data'>
+                                    <label style={{ textDecoration: 'underline', fontSize: '16px' }}>Interview Supporter Data</label> <br />
+                                    <label>Interview Supporter-Id : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupporter.userId}</span> <br />
+                                    <label>Interview Supporter-Name : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupporter.userFirstname + " " + interviewSupportWithInterviewSupporterData.interviewSupporter.userLastname}</span> <br />
+                                    <label>Interview Supporter-Mail : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupporter.username}</span> <br />
+                                    <label>Interview Supporter-Phone : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupporter.phoneNumberWithCountryCode}</span> <br />
+                                    <label>Interview Supporter-Experience : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupporter.userExperience + ' years'}</span> <br />
+                                    <label>Interview Supporter-Technical-Stack : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupporter.technologyList.map(tech => tech.technologyName).join(', ')}</span>
+                                </div>
+                                <div className='interview-support-data mt-2'>
+                                    <label style={{ textDecoration: 'underline', fontSize: '16px' }}>Present Interview Support Data</label> <br />
+                                    <label>Technical-Stack : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupport.technologyList.map(tech => tech.technologyName).join(', ')}</span> <br />
+                                    <div className='time-slots'>
+                                        <label>Available Slots : </label>
+                                        <div className='time-slot-container'>
+                                            {interviewSupportWithInterviewSupporterData.interviewSupport.timeSlotList.map((item, index) => (
+                                                <button
+                                                    key={index}
+                                                    type='button'
+                                                    className='time-slot-button'
+                                                >
+                                                    {Constants.formatTime(Constants.convertUserTimezoneTime(item.slotStartTime)) + ' - ' + Constants.formatTime(Constants.convertUserTimezoneTime(item.slotEndTime))}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='interview-support-data mt-2'>
+                                    <label style={{ textDecoration: 'underline', fontSize: '16px' }}>Updating Interview Support Data</label> <br />
+                                    <label>Technical-Stack : </label> <span>{interviewSupportWithInterviewSupporterData.interviewSupport.updatedTechnologyList.map(tech => tech.technologyName).join(', ')}</span> <br />
+                                    <div className='time-slots'>
+                                        <label>Available Slots : </label>
+                                        <div className='time-slot-container'>
+                                            {interviewSupportWithInterviewSupporterData.interviewSupport.updatedTimeSlotList.map((item, index) => (
+                                                <button
+                                                    key={index}
+                                                    type='button'
+                                                    className='time-slot-button'
+                                                >
+                                                    {Constants.formatTime(Constants.convertUserTimezoneTime(item.slotStartTime)) + ' - ' + Constants.formatTime(Constants.convertUserTimezoneTime(item.slotEndTime))}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row mt-2'>
+                                    <div className='description col-12'>
+                                        <label>Description</label>
+                                        <textarea
+                                            className='form-control'
+                                            value={description}
+                                            onChange={handleDescription}
+                                            placeholder="Type description..."
+                                        >
+                                        </textarea>
+                                        <div>
+                                            {descriptionErrMsgDiv &&
+                                                <div style={customCssForMsg}>
+                                                    <label>{descriptionErrMsg}</label>
+                                                </div>}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    {changeAdminStatusErrMsgDiv &&
+                                        <div style={customCssForMsg}>
+                                            <label>{changeAdminStatusErrMsg}</label>
+                                        </div>}
+                                </div>
+                            </div>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <div style={{ display: 'flex', gap: '15px' }}>
+                                <button
+                                    className='modal-button'
+                                    onClick={() => handleChangeAdminStatus(Constants.APPROVED, interviewSupportWithInterviewSupporterData.interviewSupport.interviewSupportId)}
+                                >
+                                    Approve
+                                </button>
+                                <button
+                                    className='modal-button'
+                                    onClick={() => handleChangeAdminStatus(Constants.REJECTED, interviewSupportWithInterviewSupporterData.interviewSupport.interviewSupportId)}
+                                >
+                                    Reject
+                                </button>
+                            </div>
+                        </Modal.Footer>
+                    </Container>
+                </Modal>
+            )}
+        </div>
+    );
+}
+
+export default UpdatedInterviewSupport; 

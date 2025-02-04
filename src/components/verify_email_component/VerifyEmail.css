@@ -1,0 +1,325 @@
+/* CSS for verify email parent component */
+/* .Verify-email-page-component {
+    width: 100%;
+    height:100%;
+    background-color: #1b4962;
+} */
+
+/* CSS for verify email child component contain login form */
+/* .Verify-email-form-component {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 35%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    padding-top: 0%;
+} */
+
+/* CSS for verify email form heading */
+/* .Verify-email-form-heading {
+    color: #1b4962;
+    text-align: center;
+    border-bottom: 1px solid #1b4962;
+} */
+
+/* CSS for verify email form */
+/* .Verify-email-form {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 56%;
+    padding: 35px;
+} */
+
+/* CSS for form input text fields */
+/* form .Verify-email-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+  
+form .Verify-email-txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 10px 0;
+}
+  
+.Verify-email-txt-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    background: none;
+    outline: none;
+}
+  
+.Verify-email-txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+  
+.Verify-email-txt-field span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1b4962;;
+    transition: 0.5s;
+}
+  
+.Verify-email-txt-field input:focus ~ label,
+.Verify-email-txt-field input:valid ~ label {
+    top: -1px;
+    color: #1b4962;
+}
+  
+.Verify-email-txt-field input:focus ~ span::before,
+.Verify-email-txt-field input:valid ~ span::before {
+    width: 100%;
+} */
+/* ====================================================================================== */
+
+/* CSS for breeze custom button */
+/* .Verify-email-breeze-button {
+    font-size: 15px !important;
+    background-color: #1b4962 !important;
+    border-color: #2d4755 !important;
+    color: aliceblue !important;
+    border-radius: 4px !important;
+    margin-top: 8px;
+}
+
+.Verify-email-button-resend {
+    background: none;
+    border: none;
+    cursor: pointer;    
+    color: #1b4962;
+    font-weight: bold;
+}
+
+.Verify-email-button-resend:hover {
+    text-decoration: underline;
+}
+
+.Verify-email-div-for-err-msg {
+    font-size: small;
+} */
+
+/*================================ After Responsive =========================================*/
+/* CSS for verify email parent component */
+.Verify-email-page-component {
+    width: 100%;
+    height: 100%;
+    background-color: #1b4962;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS for verify email child component containing the form */
+.Verify-email-form-component {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px; /* Ensure maximum width for larger screens */
+    box-sizing: border-box;
+}
+
+/* CSS for verify email form heading */
+.Verify-email-form-heading {
+    color: #1b4962;
+    text-align: center;
+    border-bottom: 1px solid #1b4962;
+    padding-bottom: 10px;
+    margin-bottom: 15px; /* Add margin to separate from form fields */
+}
+
+/* CSS for verify email form */
+.Verify-email-form {
+    width: 100%;
+    padding: 20px;
+}
+
+/* CSS for form input text fields */
+form .Verify-email-txt-field {
+    position: relative;
+    margin: 20px 0;
+}
+
+.Verify-email-txt-field input {
+    width: 100%;
+    padding: 10px 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #adadad;
+    background: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.Verify-email-txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.Verify-email-txt-field span::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1b4962;
+    transition: 0.5s;
+}
+
+.Verify-email-txt-field input:focus ~ label,
+.Verify-email-txt-field input:valid ~ label {
+    top: -5px;
+    color: #1b4962;
+    font-size: 12px;
+}
+
+.Verify-email-txt-field input:focus ~ span::before,
+.Verify-email-txt-field input:valid ~ span::before {
+    width: 100%;
+}
+
+/* CSS for breeze custom button */
+.Verify-email-breeze-button {
+    font-size: large !important;
+    background-color: #1b4962 !important;
+    border: none !important;
+    color: aliceblue !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.Verify-email-button-resend {
+    background: none;
+    border: none;
+    cursor: pointer;    
+    color: #1b4962;
+    font-weight: bold;
+}
+
+.Verify-email-button-resend:hover {
+    text-decoration: underline;
+}
+
+.Verify-email-div-for-err-msg {
+    font-size: medium;
+    font-weight: 700;
+    color: #be3144;
+}
+
+.Verify-email-div-for-suc-msg {
+    font-size: medium;
+    font-weight: 700;
+    color: green;
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    .Verify-email-form-component {
+        width: 90%;
+        max-width: none;
+    }
+
+    .Verify-email-breeze-button,
+    .Verify-email-button-resend {
+        font-size: medium;
+        padding: 8px 16px;
+    }
+
+    .Verify-email-form-heading h3 {
+        font-size: 1.5rem;
+    }
+
+    .Verify-email-txt-field input {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .Verify-email-txt-field label {
+        font-size: 12px;
+    }
+
+    .Verify-email-div-for-err-msg {
+        font-size: smaller;
+    }
+
+    .Verify-email-div-for-suc-msg {
+        font-size: smaller;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .Verify-email-form-component {
+        width: 95%;
+        max-width: none;
+    }
+
+    .Verify-email-breeze-button,
+    .Verify-email-button-resend {
+        font-size: small;
+        padding: 8px 12px;
+    }
+
+    .Verify-email-form-heading h3 {
+        font-size: 1.2rem;
+    }
+
+    .Verify-email-txt-field input {
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .Verify-email-txt-field label {
+        font-size: 10px;
+    }
+
+    .Verify-email-div-for-err-msg {
+        font-size: smaller;
+    }
+
+    .Verify-email-div-for-suc-msg {
+        font-size: smaller;
+    }
+}
+
+  
+    

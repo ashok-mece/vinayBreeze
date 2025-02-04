@@ -1,0 +1,87 @@
+.admin-enrolled-training-list .card:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.admin-enrolled-training-list .prev-next-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
+
+.admin-enrolled-training-list button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}
+
+.admin-enrolled-training-list .enrolled-count-button {
+    font-size: 12px !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.admin-enrolled-training-list .stop-enrolled-button {
+    font-size: 12px !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+/* confirm and withdraw button css */
+.enrolled-candidates-for-training-modal .enroll-status-withdraw-button {
+    font-size: medium !important;
+    font-weight: 600;
+    background-color: rgb(224, 161, 44);
+    border-color: rgb(224, 161, 44);
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.enrolled-candidates-for-training-modal .enroll-status-confirmed-button {
+    font-size: medium !important;
+    font-weight: 600;
+    background-color: rgb(49, 148, 49);
+    border-color: rgb(49, 148, 49);
+    color: var(--white-color) !important; 
+    border-radius: 4px !important;
+}
+
+.admin-enrolled-training-list .update-date-button {
+    font-size: small !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-left: 20px;
+}
+
+.update-date-modal .update-date-modal-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.stop-enrollment-modal .confirm-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.stop-enrollment-modal .cancel-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+}
+
+.cdb-datatable thead[data-test="table-foot"] {
+    display: none; /* Hide the footer <thead> */
+}

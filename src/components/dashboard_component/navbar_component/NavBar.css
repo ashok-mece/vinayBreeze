@@ -1,0 +1,35 @@
+.update-details-modal .technology-multiselect .option:hover {
+    background-color: var(--child-color) !important;
+}
+
+.update-details-modal .experience .expInput {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: var(--white-color) !important;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.update-details-modal .experience .expInput:focus {
+    outline: 0;
+}
+
+.update-details-modal .experience .expInput::placeholder {
+    font-size: 15px;
+}
+
+.update-details-modal .button-otp {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-left: 20px;
+    padding: 5px;
+}

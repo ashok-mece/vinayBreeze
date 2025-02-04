@@ -1,0 +1,13 @@
+.quotation-slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.quotation {
+    flex: 0 0 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.quotation.active {
+    flex: 0 0 100%;
+}

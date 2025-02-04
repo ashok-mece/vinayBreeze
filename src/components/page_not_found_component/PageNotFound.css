@@ -1,0 +1,31 @@
+.page-not-found-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-not-found-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.page-not-found-dashboard-button {
+    background-color: var(--app-color) !important;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+    .page-not-found-content {
+        padding: 10px;
+    }
+}

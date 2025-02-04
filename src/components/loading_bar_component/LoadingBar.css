@@ -1,0 +1,32 @@
+/* LoadingSpinner.css */
+
+/* Overlay to cover the parent container */
+.loading-spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    z-index: 9999; /* Ensure it's on top of other content */
+  }
+  
+  /* Circular loading spinner */
+  .loading-spinner {
+    border: 4px solid var(--child-color) !important; /* Light gray border */
+    border-top: 4px solid var(--app-color) !important; /* Blue border for spinner animation */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite; /* Rotate animation */
+  }
+  
+  /* Animation for spinner rotation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+   

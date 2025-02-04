@@ -1,0 +1,48 @@
+.created-trainings .card:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.created-trainings .prev-next-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+} 
+
+.created-trainings .prev-next-div button[disabled] {
+    background-color: #8CB9BD !important;
+    border-color: #8CB9BD !important;
+}
+
+.created-trainings .view-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.trainer-and-training-data .file-preview-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.trainer-and-training-data .responsive-video {
+    width: 100%;
+    height: auto;
+}
+
+.view-hold-training-modal .modal-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+  
+
+
+

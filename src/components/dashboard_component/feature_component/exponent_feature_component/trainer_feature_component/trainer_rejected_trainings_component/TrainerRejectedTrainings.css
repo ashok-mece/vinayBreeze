@@ -1,0 +1,12 @@
+.trainer-rejected-trainings .rejected-training .update-button {
+    font-size: medium !important;
+    background-color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 4px !important;
+    margin-top: 10px;
+}
+
+.update-training-modal .update-training .technology-multiselect .option:hover {
+    background-color: var(--child-color) !important;
+}
